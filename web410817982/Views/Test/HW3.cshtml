@@ -2,14 +2,20 @@
 
 @{
     ViewBag.Title = "HW3";
-    string[] fruits = { "","蘋果", "香蕉", "荔枝", "鳳梨", "西瓜" };
-    for(int i = 1; i < 6; i++)
+    string[] fruits = {"蘋果", "香蕉", "荔枝", "鳳梨", "西瓜" };
+    @*for(int i = 1; i < 6; i++)
             {
                 <ol>                    
-                    @i @fruits[@i];
+                    @i @fruits[i];
                 </ol>
-            }
+            }*@
 }
+
+<ol>
+    @foreach (var item in fruits) { 
+        <li>@item</li>
+    }
+</ol>
 
 
 
