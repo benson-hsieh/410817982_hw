@@ -5,9 +5,10 @@
 
 <h2>喝水建議量</h2>
 
-@using (Html.BeginForm(actionName: "Index", controllerName: "Water", FormMethod.Get))
+@using (Html.BeginForm("Index", "Water", FormMethod.Get))
 {
     <p>姓名:@Html.TextBox(name:"name")</p>
     <p>體重:@Html.TextBox(name:"Weight")</p>
+    <p>Hi,@ViewBag.name, 建議喝水量:@ViewBag.result</p>
     <input type="submit" value="送出">
 }
